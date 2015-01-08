@@ -1,3 +1,63 @@
-p {
-  color: red;
+*, *::before, *::after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0 auto;
+  padding: 0;
+  background: white;
+  font-family: sans-serif;
+  color: black;
+}
+
+ul, li, a {
+  list-style: none;
+  text-decoration: none;
+}
+
+.page-wrap {
+  margin: 0 auto;
+}
+
+/* ========= Header ============= */
+
+header {
+  margin: 0 auto;
+  height: 522px;
+  background: lightblue no-repeat top center;
+}
+
+/* =========== .main-content-wrap ======== */
+
+.main-content-wrap {
+  margin: 0 auto;
+  background-color: pink;
+  max-width: 1300px;
+  height: 1154px;
+}
+
+
+
+
+
+
+/* ============= .pic-nav-wrap ============ */
+
+.pic-nav-wrap {
+  background-color: lightgreen;
+  margin: 0 auto;
+  height: 331px;
+}
+
+
+/* ================ footer ================== */
+
+footer {
+  background-color: yellow;
+  height: 97px;
+  margin: 0 auto;
 }
