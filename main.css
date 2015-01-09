@@ -204,7 +204,7 @@ section {
 
 .sidebar-nav-author li {
   font-size: 13px;
-  float: left;
+  display: inline-block;
   margin: 18px;
 }
 
@@ -213,10 +213,30 @@ section {
   position: relative;
 }
 
-.sidebar-pic-wrap h3 {
-  position: absolute;
-  right: 0;
-  top: 0;
+.sidebar-pic {
+  width: 277px;
+  height: 300px;
+  background: lightblue;
+}
+
+a.left {
+  display: block;
+  text-align: right;
+  text-decoration: underline;
+}
+
+.text-heading-aside {
+
+}
+
+.underline {
+  text-decoration: underline;
+}
+
+h1.main-content-bottom {
+  display: block;
+  border-top: 1px solid gray;
+  text-align: center;
 }
 
 
