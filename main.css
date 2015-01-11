@@ -1,4 +1,4 @@
-/** {
+x/** {
   border: 1px solid red;
 }*/
 
@@ -218,15 +218,16 @@ nav div.icon-hourglass {
 
 section {
   display: inline-block;
-  max-width: 698px;/* 698*/
+  max-width: 625px;/* 698*/
   margin: 0 auto;
+  /*margin-right: 41px;*/
   padding-left: 41px;/* 41*/
-  padding-right: 41px;
+  padding-right: 20px; /* 41 + 78 for p */
   background: transparent;
 }
 
 div.author-wrap {
-  margin-top: 5px;
+  margin-top: 0;
   height: 28px;
   width: 600px;
 }
@@ -247,7 +248,7 @@ h5.text-author-small {
   display: inline-block;
   color: #106DB3;
   color: green;
-  font-size: 16px;
+  font-size: 0.9em;
   margin-left: 3px;
   margin-top: 3px;
   vertical-align: bottom;
@@ -256,9 +257,12 @@ h5.text-author-small {
 
 a.a-author {
   display: inline-block;
-  padding-left: 10px;
+  padding-left: 14px;
   text-decoration: underline;
-  letter-spacing: 0.5px;
+  font-size: smaller;
+  font-weight: bold;
+  letter-spacing: 0.75px;
+  word-spacing: 0.4px;
 }
 
 span.no-underline {
@@ -267,9 +271,24 @@ span.no-underline {
 
 section p {
   color: green;
-  padding-top: 34px;
-  padding-left: 5px;
-  font-size: 18px; /* 1.2em */
+  font-size: 1.2em; /* 1.2em */
+  line-height: 1.4em;
+}
+
+p.first-p {
+	 padding-top: 34px;	
+}
+
+p + p {
+	margin-top: 1.3em;
+	margin-bottom: 0;	
+}
+br.p.break {
+	line-height: 0.1em;	
+}
+
+P:last-child {
+	margin-bottom: 1em;	
 }
 
 
@@ -279,13 +298,15 @@ span.underline {
 
 section h2 {
   font-family: 'Open Sans Condensed', Arial, sans-serif;
-  font-weight: 400;
-  font-size: 32px;
+  text-transform: uppercase;
+  font-weight: 600;
+  font-size: 28px;
   border-left: 1px solid #EDEDED;
   color: #9FC4E1;
   margin-top: 31px;
   padding-left: 20px;
   margin-left: 10px;
+  margin-bottom: 35px;
   letter-spacing: 2px;
   color: #106DB3;
 }
