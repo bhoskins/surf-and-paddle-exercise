@@ -26,6 +26,7 @@ body {
 ul, li, a {
   list-style: none;
   text-decoration: none;
+  color: #A3B3BF;
 }
 
 /*======Fonts and colors =======
@@ -41,7 +42,7 @@ Special Characters: & &amp; | "  &quot; | . &period;
 =================================*/
 header {
   font-family: 'Oswald', sans-serif;
-  font-size: 1 rem;
+  font-size: 1 em;
   font-weight: 400;
   color: #083451;
   background: #1C639F no-repeat top center;
@@ -51,39 +52,40 @@ div.header-menu-bar {
   background: transparent;
 }
 
-.text-nav-top-icon {
+nav a {
   font-size: 16px;
-  font-weight: 300;
-  font-stretch: ultra-condensed;
-  padding-left: 1px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  word-spacing: 2px;
   color: #083451;
 }
 
-nav a {
-  font-size: 18px;
-  font-weight: 300;
-  font-stretch: ultra-condensed;
-  letter-spacing: -.5px;
-  color: #083451;
-
+nav li:first-child a {
+	padding-right: 10px;	
 }
 
 .header-text-wrap {
   font-family: 'Oswald', Arial, sans-serif;
+  
 }
 h1.text-page-header {
-  font-size: 100px;
+	position: relative;
+	left: 10px;
+	font-family: "Oswald";
+	font-weight: 500;
+  font-size: 90px;
   color: #fff;
-  font-weight: 300;
-  font-stretch: ultra-condensed;
-  letter-spacing: -5px;
+  letter-spacing: 12px;
+  word-spacing: 12px;
   margin: 0;
+   text-transform: uppercase;
 }
 h5.text-header-small {
   margin-top: -15px;
   font-size: 16px;
   font-stretch: ultra-condensed;
   letter-spacing: -0.65px;
+ 
   color: #083451;
 }
 
@@ -93,7 +95,7 @@ div.main-content-wrap {
 }
 
 section h1 {
-  color: green;
+  color: #083452;
   font-size: 75px;
   font-weight: 500;
   line-height: 75px;
@@ -131,7 +133,7 @@ header {
 
 .header-menu-bar {
   position: relative;
-  left: -14px;
+  left: -13px;
   top: 0;
   height: 66px;
   background: blue;
@@ -150,6 +152,16 @@ header {
 .text-nav-top-icon {
   display: inline-block;
   margin-left: 7px;
+}
+  
+  .text-nav-top-icon {
+  font-size: 15px;
+  font-weight: 400;
+  padding-left: 5px;
+  color: #083451;
+  letter-spacing: 1.5px;
+  word-spacing: 1.6px;
+
 }
 
 
@@ -178,7 +190,7 @@ nav div.icon-hourglass {
 
 .header-text-wrap {
   position: relative;
-  margin: 150px auto 132px;
+  margin: 125px auto 132px;
   width: 940px;
   padding: 2px;
   height: 130px;
@@ -202,11 +214,10 @@ nav div.icon-hourglass {
   padding-top: 62px;
   padding-bottom: 0;
   padding-left: 120px; /*originally 122 */
-  padding-right: 75px;
+  padding-right: 38px;
   background-color: #fff;
   max-width: 1300px;
-  height: 1154px;
-  background-color: #999;
+  height: 877px; /*1154 */
   font-family: "Open Sans Condensed", Arial, sans-serif;
 }
 
@@ -247,7 +258,6 @@ div.author-small {
 h5.text-author-small {
   display: inline-block;
   color: #106DB3;
-  color: green;
   font-size: 0.9em;
   margin-left: 3px;
   margin-top: 3px;
@@ -270,7 +280,7 @@ span.no-underline {
 }
 
 section p {
-  color: green;
+  color: #5E686F;
   font-size: 1.2em; /* 1.2em */
   line-height: 1.4em;
 }
@@ -370,7 +380,6 @@ ul.section-nav {
   display: inline-block;
   height: 30px;
   width: 33px;
-/*  background-origin: content-box;*/
   vertical-align: middle;
 }
 
@@ -400,27 +409,14 @@ ul.section-nav {
   background: url('images/share.png') no-repeat center center;
 }
 
-/*.section-nav p {
-  display: inline-block;
-  width: 125px;
-  height: 30px;
-  font-size: 1em;
-  margin: 0;
-  padding-left: 14px;
-  padding-right: 0;
-  vertical-align: middle;
-}
-*/
-
 
 /*===== Right Column Below =======*/
 
 .col-right {
-  border: 1px solid green;
   position: relative;
   display: inline-block;
   max-width: 358px; /*358 */
-  padding-left: 44px;/* 41*/
+  padding-left: 50px;/* 41*/
   padding-right: 41px;
 }
 
@@ -457,7 +453,8 @@ div.center-author {
 
 
 .pic-sidebar-author {
-  background: lightblue;
+  background: rgba(255,255,255,1) url('images/author-large.png') no-repeat center center;
+
   border-radius: 100%;
   width: 85px;
   height: 85px;
@@ -469,6 +466,7 @@ h3.text-author-medium {
   text-transform: uppercase;
   font-weight: 550;
   margin-bottom: -5px;
+  color: #106DB3;
 
 }
 
@@ -479,10 +477,12 @@ h3.text-author-medium {
 
 .sidebar-nav-author li {
   font-size: 14px;
-  font-weight: 700;
+  font-weight: 600;
   display: inline-block;
 /*   margin: 18px; */
-  margin-right: 18px;
+  margin-right: 15px;
+  letter-spacing: 0.35px;
+  color: #A3B3BF;
 }
 .sidebar-nav-author li:last-child {
   margin-right: 0;
@@ -497,7 +497,9 @@ h3.text-author-medium {
   width: 280px;
   height: 300px;
   position: relative;
-  background: lightblue;
+  left: 3px;
+  background: url('http://placekitten.com/g/200/300') no-repeat;
+  background-size: cover;
   margin: 0;
   padding: 0;
 }
@@ -505,7 +507,7 @@ h3.text-author-medium {
 a.left {
   display: block;
   position: relative;
-  left: 5px;
+ 	right: 75px;
   text-align: right;
   text-decoration: underline;
   margin-top: 4px;
@@ -516,6 +518,7 @@ a.left {
 .text-heading-aside {
   margin-top: 40px;
   margin-bottom: 4px;
+  padding-left: 5px;
   text-transform: uppercase;
   font-size: 1.3em;
   font-weight: 400;
@@ -524,7 +527,9 @@ a.left {
 }
 
 .col-right p {
-  color: green;
+	padding-left: 5px;
+	padding-right: 85px;
+  color: #A3B3BF;
   font-weight: 500;
   letter-spacing: 0.9px;
   word-spacing: 0.4px;
@@ -540,8 +545,9 @@ a.left {
 }
 
 h1.main-content-bottom {
-  max-width: 1300px;
-  border-top: 1px solid gray;
+  margin-top: 70px;
+  padding-bottom: 28px;
+  border-top: 1px solid #E1E7EA;
   text-align: center;
   font-size: 77px;
   font-weight: 700;
@@ -591,7 +597,19 @@ h1.main-content-bottom {
   left: 15px;
 }
 
+h1.main-content-bottom {
+	margin-left: auto;
+	margin-right: auto;
+	font-family: "Oswald";
+	border-top: 1px solid #E1E7EA;
+	background: #fff;
+	padding-top: 25px;
+	font-size: 62px;
+	font-weight: 500;
+	letter-spacing: 0.7px;
+	color: #083452;
 
+}
 
 
 /* ================ footer ================== */
