@@ -326,6 +326,11 @@ ul.section-nav {
   width: 158px;
   height: 30px;
   margin-left: 10px;
+  background: url('images/section-nav-anchor.png') no-repeat top left;
+}
+
+.section-nav li:hover {
+	background: url('images/section-nav-a-hover.png') no-repeat top left;
 }
 
 .section-nav li:first-child {
@@ -350,10 +355,6 @@ ul.section-nav {
 
 .section-nav span {
 	margin-left: 12px;	
-}
-.section-nav li:first-child a {
- 
-/*  color: red;*/
 }
 
 .section-nav img {
@@ -386,19 +387,20 @@ ul.section-nav {
 }
 
 .icon-comments {
-  background: url('images/comments.png') #5E686F no-repeat center center;
+  background: url('images/comments.png') no-repeat center center;
+  background-color: transparent;
   background-size: 10%;
 }
 
 .icon-later {
-  background: url('images/later.png') #5E686F no-repeat center center;
+  background: url('images/later.png') no-repeat center center;
 }
 
 .icon-share {
-  background: url('images/share.png') #5E686F no-repeat center center;
+  background: url('images/share.png') no-repeat center center;
 }
 
-.section-nav p {
+/*.section-nav p {
   display: inline-block;
   width: 125px;
   height: 30px;
@@ -408,7 +410,7 @@ ul.section-nav {
   padding-right: 0;
   vertical-align: middle;
 }
-
+*/
 
 
 /*===== Right Column Below =======*/
