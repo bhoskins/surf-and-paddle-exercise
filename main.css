@@ -122,6 +122,9 @@ section h1 {
 header {
   margin: 0 auto;
   height: 522px;
+    background: url('images/header.png') no-repeat top left;
+	background-size: cover;
+	background-color: rgba(255,255,255,.0.8);
 }
 
 .center {
@@ -136,7 +139,6 @@ header {
   left: -13px;
   top: 0;
   height: 66px;
-  background: blue;
   padding: 10px;
 }
 
@@ -447,7 +449,6 @@ div.center-author {
   padding-top: 10px;
   padding-bottom: 0;
   text-align: center;
-  border: 1px solid aqua;
 
 }
 
@@ -564,7 +565,6 @@ h1.main-content-bottom {
 /* ============= .pic-nav-wrap ============ */
 
 .pic-nav-wrap {
-  background-color: lightgreen;
   margin: 0 auto;
   height: 331px;
 }
@@ -575,27 +575,101 @@ h1.main-content-bottom {
   height: 331px;
 }
 
-.pic-nav-wrap li {
-  background: gray;
+.pic-nav-wrap li:first-child {
+	
+  background: url('http://placekitten.com/g/325/331') no-repeat center center;
+  background-size: cover;
 }
+
+.pic-nav-wrap li:nth-child(2) {
+  background: url('http://placekitten.com/g/325/331') no-repeat center center;
+  background-size: cover;
+}
+
+.pic-nav-wrap li:nth-child(3) {
+  background: url('http://placekitten.com/g/325/331') no-repeat center center;
+  background-size: cover;
+}
+
+.pic-nav-wrap li:nth-child(4) {
+  background: url('http://placekitten.com/g/325/331') no-repeat center center;
+  background-size: cover;
+}
+
+
+
 
 .pic-nav-wrap a {
   display: inline-block;
   position: relative;
   width: 100%;
+  
   height: 331px;
   /*margin-left: 15px;
   margin-bottom: 16px;*/
+  font-size: 30px;
   background-color: rgba(255,255,255,0.5);
-
 }
+
+.pic-nav-wrap a:hover {
+	background-color: transparent;	
+}
+
+.pic-nav-wrap li:first-child h3 {
+	padding-top: 270x;
+	padding-right: 35px;	
+	padding-left: 10px;
+}
+.pic-nav-wrap li:nth-child(2) h3 {
+	padding-top: 270px;
+	padding-right: 160px;	
+	padding-left: 10px;
+}
+
+.pic-nav-wrap li:nth-child(3) h3 {
+	padding-top: 225px;
+	padding-right: 60px;	
+	padding-left: 10px;
+}
+
+.pic-nav-wrap li:nth-child(4) h3 {
+	padding-top: 270px;
+	padding-right: 85px;	
+	padding-left: 10px;
+}
+
+.pic-nav-wrap h3:hover {
+	color: #fff;	
+}
+
+
 
 .pic-nav-wrap h3 {
+	font-family: "Open Sans Condensed";
   display: inline-block;
   position: absolute;
-  bottom: 16px;
-  left: 15px;
+  bottom: 8px;
+  left: 18px;
+  padding-top: 230px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: -1.5px;
+  word-spacing: -1px;
+  
+  margin: 0;
+  color: #083452;
 }
+
+.pic-nav-wrap h3:hover {
+	color: white;	
+}
+
+.break {
+	margin: 0;	
+}
+
+
+
 
 h1.main-content-bottom {
 	margin-left: auto;
@@ -615,9 +689,20 @@ h1.main-content-bottom {
 /* ================ footer ================== */
 
 footer {
-  background-color: yellow;
   height: 97px;
   margin: 0 auto;
+  background-color: #083452;
+  	color: #fff;	
+	font-size: 14px;
+}
+
+footer p {
+
+}
+
+footer img {
+	margin-right: 10px;
+	font-weight: 200;	
 }
 
 .footer-menu-bar {
@@ -625,16 +710,12 @@ footer {
   margin: 0 auto;
   width: 993px;
   height: 55px;
-  margin-top: 17px;
-  margin-bottom: 25px;
-  background-color: #999;
-
+ padding-top: 20px;
 }
 
 .footer-menu-left {
   display: inline-block;
   height: 55px;
-  background: aqua;
 }
 
 footer img {
@@ -646,10 +727,9 @@ footer img {
 footer ul {
   display: inline-block;
   position: absolute;
-  top: 0;
+  top: 20px;
   right: 0;
   width: 45%;
-  background: pink;
   text-align: right;
 }
 
@@ -665,6 +745,8 @@ footer ul::before {
 footer li {
   display: inline-block;
   position: relative;
+  padding-right: 10px;
+  letter-spacing: -0.25px
   border-right: 1px solid gray;
 }
 
