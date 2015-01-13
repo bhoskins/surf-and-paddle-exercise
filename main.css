@@ -1,4 +1,8 @@
-x/** {
+/**========================================
+          Base
+==========================================*/
+ /* Sledge Hammer
+ {
   border: 1px solid red;
 }*/
 
@@ -29,27 +33,22 @@ ul, li, a {
   color: #A3B3BF;
 }
 
-/*======Fonts and colors =======
+/*======Colors and Fonts (Theme) =======
 header: https://www.google.com/fonts#UsePlace:use/Collection:Oswald
   Oswald: 400, 300, 700 font-weights
 body:  https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
   Open Sans Condensed: 300 light and 700 bold;
 
-Alternates: 'Dorsa' | 'Six Caps'
 
-Special Characters: & &amp; | "  &quot; | . &period;
-'  &apos; | ! &excl; | , &comma;
 =================================*/
-header {
+.header {
   font-family: 'Oswald', sans-serif;
   font-size: 1 em;
   font-weight: 400;
-  color: #083451;
   background: #1C639F no-repeat top center;
 
 }
 div.header-menu-bar {
-  background: transparent;
 }
 
 nav a {
@@ -61,12 +60,13 @@ nav a {
 }
 
 nav li:first-child a {
-	padding-right: 10px;	
+	padding-right: 10px;
 }
 
 .header-text-wrap {
+  position: relative;
   font-family: 'Oswald', Arial, sans-serif;
-  
+
 }
 h1.text-page-header {
 	position: relative;
@@ -81,11 +81,12 @@ h1.text-page-header {
    text-transform: uppercase;
 }
 h5.text-header-small {
+  position: absolute;
   margin-top: -15px;
   font-size: 16px;
   font-stretch: ultra-condensed;
-  letter-spacing: -0.65px;
- 
+  letter-spacing: 0.8px;
+
   color: #083451;
 }
 
@@ -105,13 +106,10 @@ section h1 {
 }
 
 
+/*=================================
 
-
-
-
-
-
-/*============End of fonts/colors=================*/
+          Layout
+===================================*/
 
 .page-wrap {
   margin: 0 auto;
@@ -119,13 +117,33 @@ section h1 {
 
 /* ========= Header ============= */
 
-header {
+.header {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
   margin: 0 auto;
   height: 522px;
-    background: url('images/header.png') no-repeat top left;
-	background-size: cover;
-	background-color: rgba(255,255,255,.0.8);
+  background: url(images/header.png) no-repeat center center;
+  background-size: cover;
 }
+
+  .header::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    background-color: RGBA(19, 68, 153, .5);
+    transition: background-color 300ms;
+    }
+  .header:hover::after {
+    background-color: transparent;
+    }
+
+
 
 .center {
   margin: 0 auto;
@@ -155,7 +173,7 @@ header {
   display: inline-block;
   margin-left: 7px;
 }
-  
+
   .text-nav-top-icon {
   font-size: 15px;
   font-weight: 400;
@@ -215,11 +233,11 @@ nav div.icon-hourglass {
   margin: 0 auto;
   padding-top: 62px;
   padding-bottom: 0;
-  padding-left: 120px; /*originally 122 */
+  padding-left: 165px; /*originally 122 [120 + 45] */
   padding-right: 38px;
   background-color: #fff;
   max-width: 1300px;
-  height: 877px; /*1154 */
+  /*height: 877px;*/   /*1154   added this */
   font-family: "Open Sans Condensed", Arial, sans-serif;
 }
 
@@ -231,12 +249,11 @@ nav div.icon-hourglass {
 
 section {
   display: inline-block;
-  max-width: 625px;/* 698*/
+  max-width: 666px;/* 698*/
   margin: 0 auto;
-  /*margin-right: 41px;*/
+  /*margin-right: 41px; /*  Fiddled with this */*/
   padding-left: 41px;/* 41*/
-  padding-right: 20px; /* 41 + 78 for p */
-  background: transparent;
+  /*padding-right: 20px; /* 41 + 78 for p */*/
 }
 
 div.author-wrap {
@@ -247,6 +264,7 @@ div.author-wrap {
 
 div.author-small {
   display: inline-block;
+  position: relative;
   width: 25px;
   height: 25px;
   border-radius: 100%;
@@ -254,6 +272,18 @@ div.author-small {
   vertical-align: bottom;
   margin-left: 6px;
   margin-top: 3px;
+}
+
+div.author-small::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  background-color: RGBA(19, 68, 153, .4);
+  /*background-clip: border-box;*/
 
 }
 
@@ -277,8 +307,14 @@ a.a-author {
   word-spacing: 0.4px;
 }
 
-span.no-underline {
-  text-decoration: none;
+a.p-link {
+  display: inline;
+  text-decoration: underline;
+  color: RGBA(163, 179, 191, 1);
+}
+
+a.p-link:hover {
+  color: RGBA(16, 109, 179, 1);
 }
 
 section p {
@@ -288,19 +324,19 @@ section p {
 }
 
 p.first-p {
-	 padding-top: 34px;	
+	 padding-top: 34px;
 }
 
 p + p {
 	margin-top: 1.3em;
-	margin-bottom: 0;	
+	margin-bottom: 0;
 }
 br.p.break {
-	line-height: 0.1em;	
+	line-height: 0.1em;
 }
 
 P:last-child {
-	margin-bottom: 1em;	
+	margin-bottom: 1em;
 }
 
 
@@ -351,14 +387,14 @@ ul.section-nav {
 }
 
 .section-nav li:nth-child(2) {
-	width: 128px;	
+	width: 128px;
 }
 
 .section-nav li:nth-child(3) {
-	width: 153px;	
+	width: 153px;
 }
 
-.section-nav a {	
+.section-nav a {
 	font-size: 15px;
 	font-weight: 600;
 	letter-spacing: 0.05px;
@@ -366,7 +402,7 @@ ul.section-nav {
 }
 
 .section-nav span {
-	margin-left: 12px;	
+	margin-left: 12px;
 }
 
 .section-nav img {
@@ -390,11 +426,11 @@ ul.section-nav {
 }
 
 .section-nav li:nth-child(2) div {
-	background-size: 80%;	
+	background-size: 80%;
 }
 
 .section-nav li:nth-child(3) div {
-	background-size: 95%;	
+	background-size: 95%;
 }
 
 .icon-comments {
@@ -418,7 +454,7 @@ ul.section-nav {
   position: relative;
   display: inline-block;
   max-width: 358px; /*358 */
-  padding-left: 50px;/* 41*/
+  padding-left: 27px;/*50 41*/
   padding-right: 41px;
 }
 
@@ -454,12 +490,28 @@ div.center-author {
 
 
 .pic-sidebar-author {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
   background: rgba(255,255,255,1) url('images/author-large.png') no-repeat center center;
 
   border-radius: 100%;
   width: 85px;
   height: 85px;
   margin-top: 20px;
+}
+
+.pic-sidebar-author::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  border-radius: 100%;
+  background-color: RGBA(19, 68, 153, .4);
 }
 
 h3.text-author-medium {
@@ -495,6 +547,11 @@ h3.text-author-medium {
 }
 
 .sidebar-pic {
+  position: relative;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right:0;
   width: 280px;
   height: 300px;
   position: relative;
@@ -503,6 +560,21 @@ h3.text-author-medium {
   background-size: cover;
   margin: 0;
   padding: 0;
+}
+
+.sidebar-pic::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: RGBA(19, 68, 153, .4);
+  transition: background-color 300ms;
+}
+
+.sidebar-pic::after:hover {
+  background-color: transparent;
 }
 
 a.left {
@@ -576,7 +648,7 @@ h1.main-content-bottom {
 }
 
 .pic-nav-wrap li:first-child {
-	
+
   background: url('http://placekitten.com/g/325/331') no-repeat center center;
   background-size: cover;
 }
@@ -603,7 +675,7 @@ h1.main-content-bottom {
   display: inline-block;
   position: relative;
   width: 100%;
-  
+
   height: 331px;
   /*margin-left: 15px;
   margin-bottom: 16px;*/
@@ -612,34 +684,34 @@ h1.main-content-bottom {
 }
 
 .pic-nav-wrap a:hover {
-	background-color: transparent;	
+	background-color: transparent;
 }
 
 .pic-nav-wrap li:first-child h3 {
 	padding-top: 270x;
-	padding-right: 35px;	
+	padding-right: 35px;
 	padding-left: 10px;
 }
 .pic-nav-wrap li:nth-child(2) h3 {
 	padding-top: 270px;
-	padding-right: 160px;	
+	padding-right: 160px;
 	padding-left: 10px;
 }
 
 .pic-nav-wrap li:nth-child(3) h3 {
 	padding-top: 225px;
-	padding-right: 60px;	
+	padding-right: 60px;
 	padding-left: 10px;
 }
 
 .pic-nav-wrap li:nth-child(4) h3 {
 	padding-top: 270px;
-	padding-right: 85px;	
+	padding-right: 85px;
 	padding-left: 10px;
 }
 
 .pic-nav-wrap h3:hover {
-	color: #fff;	
+	color: #fff;
 }
 
 
@@ -655,17 +727,17 @@ h1.main-content-bottom {
   font-weight: 600;
   letter-spacing: -1.5px;
   word-spacing: -1px;
-  
+
   margin: 0;
   color: #083452;
 }
 
 .pic-nav-wrap h3:hover {
-	color: white;	
+	color: white;
 }
 
 .break {
-	margin: 0;	
+	margin: 0;
 }
 
 
@@ -692,7 +764,7 @@ footer {
   height: 97px;
   margin: 0 auto;
   background-color: #083452;
-  	color: #fff;	
+  	color: #fff;
 	font-size: 14px;
 }
 
@@ -702,7 +774,7 @@ footer p {
 
 footer img {
 	margin-right: 10px;
-	font-weight: 200;	
+	font-weight: 200;
 }
 
 .footer-menu-bar {
@@ -756,4 +828,14 @@ footer li:last-child {
 
 footer li:nth-child(4) {
   display: none;
+}
+
+footer a {
+   color: white;
+   transition: color 300ms;
+
+}
+
+footer a:hover {
+  color: red;
 }
