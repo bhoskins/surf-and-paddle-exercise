@@ -1,8 +1,9 @@
-/**========================================
-          Base
-==========================================*/
- /* Sledge Hammer
- {
+
+/*==========================================
+    Base Codes
+    ======================================*/
+ /* Sledge Hammer for initial coding
+ * {
   border: 1px solid red;
 }*/
 
@@ -41,6 +42,7 @@ body:  https://www.google.com/fonts#UsePlace:use/Collection:Open+Sans
 
 
 =================================*/
+
 .header {
   font-family: 'Oswald', sans-serif;
   font-size: 1 em;
