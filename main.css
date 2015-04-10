@@ -86,7 +86,7 @@ h1.text-page-header {
   letter-spacing: 12px;
   word-spacing: 12px;
   margin: 0;
-   text-transform: uppercase;
+  text-transform: uppercase;
 }
 h5.text-header-small {
   position: absolute;
@@ -94,7 +94,6 @@ h5.text-header-small {
   font-size: 16px;
   font-stretch: ultra-condensed;
   letter-spacing: 0.8px;
-
   color: #083451;
 }
 
@@ -106,10 +105,9 @@ div.main-content-wrap {
 section h1 {
   color: #083452;
   font-size: 75px;
-  font-weight: 500;
+  font-weight: bolder;
   line-height: 75px;
-  letter-spacing: -0.8px;
-  word-spacing: -.04px;
+  letter-spacing: -4px;
   line-height: 72px;
 }
 
@@ -154,7 +152,6 @@ section h1 {
   margin: 0 auto;
   width: 1012px;
   height: 66px;
-
 }
 
 .header-menu-bar {
@@ -218,8 +215,6 @@ nav div.icon-hourglass {
   width: 940px;
   padding: 2px;
   height: 130px;
-
-
 }
 
 .text-header-small {
@@ -321,7 +316,7 @@ h5.text-author-small {
 
 .p-link {
   display: inline;
-  text-decoration: none;
+  text-decoration: underline;
   color: RGBA(163, 179, 191, 1);
 }
 
@@ -369,6 +364,10 @@ section h2 {
   margin-bottom: 35px;
   letter-spacing: 2px;
   color: #106DB3;
+}
+
+h2.quote-text {
+  display: none;
 }
 
 
@@ -508,7 +507,6 @@ div.center-author {
   left: 0;
   right: 0;
   background: rgba(255,255,255,1) url('images/author-large.png') no-repeat center center;
-
   border-radius: 100%;
   width: 85px;
   height: 85px;
@@ -570,7 +568,6 @@ h3.text-author-medium {
   position: relative;
   top: 0;
   bottom: 0;
-  left: 0;
   right:0;
   width: 275px;
   height: 300px;
@@ -664,7 +661,6 @@ h1.main-content-bottom {
 }
 
 .pic-nav-wrap li:first-child {
-
   background: url('http://placekitten.com/g/325/331') no-repeat center center;
   background-size: cover;
 }
@@ -783,6 +779,10 @@ footer p {
   letter-spacing: -0.3px;
 }
 
+.line-break {
+  display: none;
+}
+
 .footer-menu-bar {
   position: relative;
   margin: 0 auto;
@@ -845,3 +845,306 @@ footer a {
 footer a:hover {
   color: red;
 }
+
+/***************************************
+    Media Queries
+****************************************/
+
+@media all and (max-width: 1210px) and
+  (min-width: 481px) {
+  .center {
+    width: 600px;
+  }
+  h1.text-page-header {
+    font-size: 50px;
+  }
+  .header-text-wrap {
+   left: 5%;
+  }
+  .header {
+    height: 400px;
+  }
+  section h1 {
+    font-size: 60px;
+  }
+  .text-heading-aside,
+  .text-heading-aside + p {
+    display: none;
+  }
+  h1.main-content-bottom {
+    font-size: 50px;
+  }
+  h2.quote-text {
+  display: none;
+  }
+  .main-content-wrap {
+    margin: 50px auto;
+    padding: 0;
+  }
+  .col {
+    display: block;
+  }
+  .col-left,
+  .col-right {
+    margin: 0 auto;
+  }
+}
+
+@media all and (max-width: 480px) {
+  .header {
+    height: 200px;
+  }
+  .center {
+    width: 200px;
+  }
+  .nav-top-icon {
+    position: absolute;
+    top: 50px;
+    left: 45%;
+  }
+
+  h4.text-nav-top-icon {
+    display: none;
+  }
+  .header-menu-bar {
+    height: 44px;
+    padding: 0;
+  }
+  .header-menu-bar ul {
+    margin: 0 auto;
+    padding: 0;
+    height: 44px;
+  }
+  .header-menu-bar li {
+    margin: 0 auto;
+    padding: 0;
+    height: 44px;
+  }
+.header-menu-bar a {
+    margin: 0 auto;
+    padding: 0;
+    height: 44px;
+  }
+  nav {
+    line-height: 44px;
+  }
+  .header-text-wrap {
+    position: relative;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 35px;
+    width: 100%;
+    text-align: center;
+  }
+  h1.text-page-header {
+    margin: 0 auto;
+    padding: 0;
+    width: 90%;
+    font-size: 35px;
+    letter-spacing: 1px;
+    word-spacing: -2px;
+  }
+  h5.text-header-small {
+    position: absolute;
+    margin: 0 auto;
+    padding: 0;
+    left: 7%;
+    width: 90%;
+    letter-spacing: 0.4px;
+  }
+  section h1 {
+    font-size: 65px;
+    padding-right: 15%;
+  }
+  div.author-small,
+  h5.text-author-small,
+  .a-author {
+    display: none;
+  }
+  .text-heading-aside,
+  .text-heading-aside + p {
+    display: none;
+  }
+  h1.main-content-bottom {
+    font-size: 50px;
+  }
+  .main-content-wrap {
+    margin: 50px auto;
+    padding: 0;
+  }
+  .col {
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 90%;
+    left: 0;
+  }
+  .col-left,
+  .col-right {
+    margin: 0 auto;
+  }
+  h2.woah-text {
+    display: none;
+  }
+  h2.quote-text {
+    display: block;
+    margin-left: 0;
+    border-left: 3px solid RGBA(211, 211, 211, 1);
+    font-size: 18px;
+  }
+  .section-nav span {
+    display: none;
+  }
+  .section-nav li:nth-child(1n) {
+    width: 33px;
+  }
+  .section-nav li:nth-child(3) {
+    position: relative;
+    left: -86px;
+  }
+  .section-nav li:first-child {
+    position: relative;
+    left: 43px;
+  }
+  .section-nav li:nth-child(2) {
+    position: relative;
+    left: 43px;
+  }
+  .pic-sidebar-author {
+    margin-top: 50px;
+    width: 100px;
+    height: 100px;
+  }
+  h3.text-author-medium {
+    font-size: 1.2em;
+  }
+  .p-link {
+    font-size: 1.2em;
+    text-decoration: none;
+  }
+  .sidebar-nav-author {
+    margin-top: 5px;
+  }
+  .sidebar-nav-author li {
+    margin: 15px;
+    letter-spacing: 1px;
+  }
+  .sidebar-nav-author li:nth-child(2) {
+
+  }
+  .sidebar-pic {
+    position: relative;
+    left: 0;
+    right: 0;
+    width: 96%;
+    margin: 0 auto;
+  }
+  h1.main-content-bottom {
+    font-size: 35px;
+    margin-top: 50px;
+    line-height: 50px;
+  }
+  .pic-nav-wrap {
+    display: block;
+    height: 1490px;
+  }
+  .pic-nav-wrap li {
+    display: block;
+    margin: 20px auto;
+    width: 90%;
+  }
+  .pic-nav-wrap li:nth-child(1) {
+    display: block;
+  }
+  .pic-nav-wrap li:nth-child(2) {
+    display: block;
+  }
+  .pic-nav-wrap li:nth-child(3) {
+    display: block;
+  }
+  .pic-nav-wrap:before,
+  .pic-nav-wrap:after {
+    content: "";
+    display: table;
+  }
+  .pic-nav-wrap:after {
+    clear: both;
+  }
+  .pic-nav-wrap {
+    zoom: 1;
+  }
+  footer {
+    width: 100%;
+    height: 250px;
+  }
+  .footer-menu-left {
+    //display: block;
+    position: relative;
+    top: 75px;
+    left: 20px;
+    width: 320px;
+    height: 150px;
+    margin: 0 auto;
+  }
+  .tiy-icon {
+    display: block;
+    margin: 15px auto;
+    width: 70px;
+    height: 70px;
+    background: url('images/theironyard.png') no-repeat center center;
+    background-size: 130%;
+  }
+  .copyright-text {
+    display: block;
+    margin: 0 auto;
+    padding: 0;
+    width: 320px;
+    font-size: 16px;
+    line-height: 14px;
+    text-align: center;
+  }
+  span.comma {
+    display: none;
+  }
+  .line-break {
+    display: block;
+  }
+  .footer-nav {
+    z-index: 50;
+  }
+  .footer-nav ul {
+    position: absolute;
+    width: 250px;
+    top: 30px;
+    left: 8%;
+  }
+  .footer-nav li {
+    margin: 10px;
+    padding: 0;
+  }
+  .footer-nav li:first-child {
+    position: absolute;
+    left: 0;
+    margin-left: -10px;
+    padding-right: 7px;
+  }
+  .footer-nav li:nth-child(2) {
+    position: absolute;
+    left: 65px;
+    padding-right: 7px;
+  }
+  .footer-nav li:nth-child(3) {
+    position: absolute;
+    left: 150px;
+  }
+  .footer-nav li:nth-child(5) {
+    position: absolute;
+    top: 30px;
+    left: 65px;
+  }
+
+
+
+}
+
